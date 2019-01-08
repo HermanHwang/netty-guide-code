@@ -11,6 +11,10 @@
     <modules>
         <module>discardserver</module>
         <module>receiveserver</module>
+        <module>echoserver</module>
+        <module>TimeServerHandler</module>
+        <module>streambasedtransport</module>
+        <module>pojoinsteadbuf</module>
     </modules>
 
     <dependencies>

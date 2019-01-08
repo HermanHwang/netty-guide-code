@@ -1,4 +1,4 @@
-package com.thinkclover.netty.s1;
+package com.thinkclover.server;
 
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;

@@ -1,4 +1,4 @@
-package com.thinkclover.netty.s2;
+package com.thinkclover.server.s2;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;

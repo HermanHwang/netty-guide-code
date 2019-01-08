@@ -1,4 +1,4 @@
-package com.thinkclover.server;
+package com.thinkclover.server.s1;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
