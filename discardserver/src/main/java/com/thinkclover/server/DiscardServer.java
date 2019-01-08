@@ -1,4 +1,4 @@
-package com.thinkclover.netty;
+package com.thinkclover.netty.s1;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
@@ -11,14 +11,14 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 
 /**
  * @program: netty-guide-code
- * @description:
+ * @description: 丢弃服务器的定义
  * @author: Mr.Hwang
  * @create: 2019-01-04 15:11
  **/
-public class ReceiveServer {
+public class DiscardServer {
     private int port;
 
-    public ReceiveServer(int port) {
+    public DiscardServer(int port) {
         this.port = port;
     }
 
@@ -32,7 +32,7 @@ public class ReceiveServer {
                     .childHandler(new ChannelInitializer<SocketChannel>() {
                         @Override
                         public void initChannel(SocketChannel ch) throws Exception {
-                            ch.pipeline().addLast(new ReceiveServerHandler());
+                            ch.pipeline().addLast(new DiscardServerHandler());
                         }
                     })
                     .option(ChannelOption.SO_BACKLOG, 128)
@@ -57,6 +57,6 @@ public class ReceiveServer {
         } else {
             port = 8081;
         }
-        new ReceiveServer(port).run();
+        new DiscardServer(port).run();
     }
 }

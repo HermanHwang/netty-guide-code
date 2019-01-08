@@ -1,9 +1,8 @@
-package com.thinkclover.netty;
+package com.thinkclover.netty.s1;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
-import io.netty.util.ReferenceCountUtil;
 
 /**
  * @program: netty-guide-code
@@ -11,18 +10,11 @@ import io.netty.util.ReferenceCountUtil;
  * @author: Mr.Hwang
  * @create: 2019-01-04 15:09
  **/
-public class ReceiveServerHandler extends ChannelInboundHandlerAdapter {
+public class DiscardServerHandler extends ChannelInboundHandlerAdapter {
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) {
-        ByteBuf in = ((ByteBuf) msg);
-        try {
-            while (in.isReadable()){
-                System.out.print((char)in.readByte());
-                System.out.flush();
-            }
-        } finally {
-            ReferenceCountUtil.release(msg);
-        }
+        // 丢弃收到的数据
+        ((ByteBuf) msg).release();
     }
 
     @Override
