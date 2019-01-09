@@ -22,3 +22,5 @@
 	
 (6)、传输pojo对象，而非Bytebuf
 	pojoinsteadbuf
+	
+(7)、chatserver 聊天服务器
