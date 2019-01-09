@@ -15,6 +15,7 @@
         <module>TimeServerHandler</module>
         <module>streambasedtransport</module>
         <module>pojoinsteadbuf</module>
+        <module>chatserver</module>
     </modules>
 
     <dependencies>
